@@ -1,0 +1,28 @@
+:root{--bg:#0e1116;--card:#171b22;--line:#262c36;--tx:#e6e9ef;--mut:#8b94a3;--pri:#2962ff;--buy:#1fa971;--sell:#e5484d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif}
+h1,h2,h3,h4{margin:0 0 8px}.muted{color:var(--mut);font-size:13px}
+header{display:flex;align-items:center;gap:16px;padding:10px 16px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;flex-wrap:wrap}
+.brand{font-weight:700;font-size:18px}.brand small{color:var(--mut);font-weight:400;font-size:11px;margin-left:4px}
+nav{display:flex;gap:4px;flex:1;overflow-x:auto}nav a{color:var(--mut);text-decoration:none;padding:6px 12px;border-radius:6px;white-space:nowrap}
+nav a.active{background:var(--pri);color:#fff}.who{display:flex;gap:10px;align-items:center}.cash{font-weight:600;color:var(--buy)}
+main{max-width:1400px;margin:0 auto;padding:16px;display:flex;flex-direction:column;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.trade-grid{display:grid;grid-template-columns:1fr 340px;gap:16px}.side{display:flex;flex-direction:column;gap:16px}.chart{min-width:0}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input,select{background:#0e1116;color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:9px 10px;font:inherit;min-width:0}
+button{border:0;border-radius:6px;padding:9px 14px;font:inherit;cursor:pointer;color:#fff;background:var(--line)}
+button.primary{background:var(--pri)}button.buy{background:var(--buy);flex:1}button.sell{background:var(--sell);flex:1}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--tx)}button.link{background:none;color:var(--pri)}
+.price{font-size:28px;font-weight:700}.tag{align-self:flex-start;font-size:12px;padding:2px 8px;border-radius:99px}
+.tag.ok{background:#12372a;color:#4ade80}.tag.warn{background:#3b2f10;color:#fbbf24}
+.msg{padding:8px 10px;border-radius:6px;font-size:14px}.msg.good{background:#12372a}.msg.bad{background:#3d1a1c}
+.good-t{color:#4ade80}.bad-t{color:#f87171}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.stats b{font-size:20px}
+.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--mut);font-weight:500;font-size:13px}
+.auth{min-height:100vh;display:grid;place-items:center;padding:16px}.auth .card{width:100%;max-width:380px}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.topic{border:1px solid var(--line);border-radius:8px;padding:12px;cursor:pointer}.topic.open{border-color:var(--pri)}.topic p{margin:4px 0;color:var(--mut);font-size:14px}.topic .use{color:var(--tx)}
+.chat .msgs{height:55vh;overflow-y:auto;display:flex;flex-direction:column;gap:8px;padding:8px;background:#0e1116;border-radius:8px}
+.bubble{background:var(--card);padding:8px 12px;border-radius:10px;max-width:80%;align-self:flex-start}.bubble.mine{align-self:flex-end;background:#1b2a55}.bubble small{color:var(--mut)}
+.chat form input{flex:1}
+@media(max-width:900px){.trade-grid{grid-template-columns:1fr}header{gap:8px}.who{margin-left:auto}main{padding:10px}}
